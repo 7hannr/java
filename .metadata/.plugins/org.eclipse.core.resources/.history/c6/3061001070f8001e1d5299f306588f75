@@ -1,0 +1,17 @@
+package am;
+
+import java.util.ArrayList;
+
+public class Sub01 {
+	public static void run() {
+		ArrayList<Car> cars=new ArrayList<Car>();
+		
+		Car car1=new Car("기아","k7","흰색",100000);
+		
+		cars.add(car1);
+		for(Car car:cars) {
+			System.out.println(car.to);
+			System.out.println("");
+		}
+	}
+}

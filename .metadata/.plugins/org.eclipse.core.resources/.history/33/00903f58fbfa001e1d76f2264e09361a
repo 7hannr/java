@@ -1,0 +1,28 @@
+package sale;
+
+import java.util.*;
+import java.io.*;
+
+public class SaleDAO {
+	File file=new File("c:/data/java/ex05/sale.txt");
+	
+	public ArrayList<Sale> List(){
+		ArrayList<Sale> array= new ArrayList<Sale>();
+		try {
+			BufferedReader reader=new BufferedReader(new FileReader(file));
+			String line="";
+			while((line=reader.readLine())!=null) {
+				String[] items=line.split(",");
+				Sale sale=new Sale();
+				sale.setCode(Integer.parseInt(items[0]));
+				sale.setName(items[1]);
+				sale.setPrice(Integer.parseInt(items[2]));
+				sale.setQnt(Integer.parseInt(items[3]));
+				array.add(sale);
+			}
+		}catch(Exception e) {
+			System.out.println("주소삭제:" + e.toString());
+		}
+		return array;
+	}
+}

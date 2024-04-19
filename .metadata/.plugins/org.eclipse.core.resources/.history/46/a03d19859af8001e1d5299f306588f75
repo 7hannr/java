@@ -1,0 +1,37 @@
+package am;
+
+
+
+public class Car { //자바빈
+	//핑드(속성)
+	private int no;
+	private String company;
+	private String model;
+	private String color;
+	private int distance;
+	private String date;
+	
+	public Car() {
+		
+	}
+	
+	public Car(int no, String company, String model, String color, int distance, String date) {
+		super();
+		this.no = no;
+		this.company = company;
+		this.model = model;
+		this.color = color;
+		this.distance = distance;
+		this.date = date;
+	}
+
+	
+	
+	@Override
+	public String toString() {
+		return "Car [no=" + no + ", company=" + company + ", model=" + model + ", color=" + color + ", distance="
+				+ distance + ", date=" + date + "]";
+	}
+		
+	
+}
